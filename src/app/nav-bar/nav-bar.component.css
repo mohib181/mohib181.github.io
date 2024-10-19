@@ -1,0 +1,101 @@
+/* Basic Navbar Styles */
+.navbar {
+  background-color: #0077b5;
+  /* Navbar background */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Title on the left */
+.nav-bar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-bar-title a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Nav Links (Right side) */
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  /* Visual gap between links */
+  list-style-type: none;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: Box appearing on hover */
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Hover box */
+  border-radius: 5px;
+}
+
+/* Hide hamburger icon on desktop */
+.nav-bar-menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive: For mobile devices */
+@media screen and (max-width: 768px) {
+
+  /* Stack links vertically on mobile */
+  .nav-links {
+    display: none;
+    /* Hide links by default */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #0077b5;
+    width: 100%;
+    text-align: right;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+    /* Show links when hamburger is clicked */
+  }
+
+  /* Show the hamburger icon */
+  .nav-bar-menu-icon {
+    display: block;
+  }
+
+  /* Adjust logo and links to center for mobile */
+  .nav-bar-title {
+    font-size: 1.3rem;
+  }
+}

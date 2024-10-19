@@ -1,1 +1,21 @@
-<p>nav-bar works!</p>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-bar-title">
+      <a [routerLink]="['/']">Md. Mohib Hossain</a>
+    </div>
+
+    <!-- Navigation Links (Right side) -->
+    <ul class="nav-links" [ngClass]="{ 'show': menuOpen }">
+      <li *ngFor="let item of navItems">
+        <a [routerLink]="item.route">{{ item.name }}</a>
+      </li>
+    </ul>
+
+    <!-- Hamburger Menu Icon for Mobile Devices -->
+    <div class="nav-bar-menu-icon">
+      <mat-icon (click)="toggleMenu()">
+        {{ menuOpen ? 'close' : 'menu' }}
+      </mat-icon>
+    </div>
+  </div>
+</nav>
