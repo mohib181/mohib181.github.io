@@ -3,8 +3,16 @@ import { AboutMeComponent } from './about-me/about-me.component';
 
 export const routes: Routes = [
     {
+        path: '',
+        component: AboutMeComponent,
+        title: 'Md. Mohib Hossain'
+    },
+    {
         path: 'about',
         component: AboutMeComponent,
         title: 'About Me'
-    }
+    },
+
+    // Wildcard route to catch unknown paths and redirect to homepage
+    { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
