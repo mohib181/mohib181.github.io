@@ -1,1 +1,37 @@
-<p>about-me works!</p>
+<div class="about-me-container">
+    <!-- Photo and Social Links -->
+    <div class="about-me-info">
+        <img src="{{profile_photo_src}}" alt="Profile Photo"
+            class="profile-photo">
+
+        <!-- Work details -->
+        <div class="work-details">
+            <h3 class="work-title">Software Development Engineer 2</h3>
+            <p class="work-place">IQVIA</p>
+            <p class="work-address">Dhaka, Bangladesh</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a *ngFor="let social of socialLinks" href="{{social.link}}" target="_blank">
+                <fa-icon [icon]="social.icon"></fa-icon>
+            </a>
+        </div>
+    </div>
+
+    <!-- About me Details -->
+    <div class="about-me-details">
+        <p>
+            Hello! I am Md. Mohib Hossain Rafi.
+            I am a dedicated professional with a strong interest in expanding my skills across various fields. 
+            Currently, I work as a Software Development Engineer 2 at IQVIA, with two years of hands-on experience in cloud data warehouses and
+            ETL pipelines. 
+        </p>
+        <p>
+            My interest lies in Data Engineering, Software Engineering and Development
+        </p>    
+        <p>
+            ⚡ Fun facts: I like cats 🐈, travelling 🌍, and I am currently learning chess ♟️
+        </p>
+    </div>
+</div>
