@@ -9,6 +9,9 @@
       <li *ngFor="let item of navItems">
         <a [routerLink]="item.route">{{ item.name }}</a>
       </li>
+      <li>
+        <a [href]="CVPath" target="_blank">CV</a>
+      </li>
     </ul>
 
     <!-- Hamburger Menu Icon for Mobile Devices -->

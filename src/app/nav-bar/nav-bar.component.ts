@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class NavBarComponent {
   menuOpen: boolean = false;
+  CVPath: string = "files/CV___Mohib.pdf"
 
   navItems = [
     { name: 'About Me', route: '/about' },
@@ -19,8 +20,7 @@ export class NavBarComponent {
     { name: 'Research', route: '/research' },
     { name: 'Education', route: '/education' },
     { name: 'Skills', route: '/skills' },
-    { name: 'Projects', route: '/projects' },
-    { name: 'CV', route: '/cv' }
+    { name: 'Projects', route: '/projects' }
   ];
 
   toggleMenu() {
