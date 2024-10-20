@@ -1,0 +1,95 @@
+.work-experience-section {
+    padding: 20px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-title hr {
+    flex-grow: 1;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+}
+
+.workplace {
+    margin-bottom: 30px;
+}
+
+.workplace-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.workplace-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.workplace-details h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.workplace-details p {
+    margin: 3px 0;
+    color: #666;
+}
+
+.roles-list {
+    list-style-type: none;
+    padding-left: 100px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.roles-list li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.role-header h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.role-header p {
+    margin: 0;
+    color: #666;
+}
+
+.role-descriptions {
+    list-style-type: square;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+
+.roles-list > li:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -55px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #666666;
+}
+
+.roles-list > li:after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: -50.5px;
+    width: 2px;
+    height: calc(100%);
+    background-color: #666666;
+}
+
+.roles-list li:last-child:after {
+    display: none;
+}

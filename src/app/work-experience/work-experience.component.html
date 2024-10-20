@@ -1,1 +1,37 @@
-<p>work-experience works!</p>
+<section class="work-experience-section" id="work">
+    <!-- Title with horizontal line -->
+    <h2 class="section-title">
+        Work Experience
+        <hr>
+    </h2>
+
+    <!-- Workplaces list -->
+    <div *ngFor="let work of workExperiences" class="workplace">
+        <div class="workplace-header">
+            <!-- Workplace logo -->
+            <img [src]="work.logo" alt="{{ work.company }} logo" class="workplace-logo">
+
+            <!-- Workplace details -->
+            <div class="workplace-details">
+                <h3>{{ work.company }}</h3>
+                <p>{{ work.duration }}</p>
+                <p>{{ work.address }}</p>
+            </div>
+        </div>
+
+        <!-- Roles within the workplace -->
+        <ul class="roles-list">
+            <li *ngFor="let role of work.roles">
+                <div class="role-header">
+                    <h4>{{ role.title }}</h4>
+                    <p>{{ role.duration }}</p>
+                </div>
+
+                <!-- Role descriptions -->
+                <ul class="role-descriptions">
+                    <li *ngFor="let description of role.descriptions">{{ description }}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
