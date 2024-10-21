@@ -7,10 +7,9 @@
     <!-- Navigation Links (Right side) -->
     <ul class="nav-links" [ngClass]="{ 'show': menuOpen }">
       <li *ngFor="let item of navItems">
-        <a [routerLink]="item.route">{{ item.name }}</a>
-      </li>
-      <li>
-        <a [href]="CVPath" target="_blank">CV</a>
+        <a *ngIf="item.type === 'router'" [routerLink]="item.route">{{ item.name }}</a>
+        <a *ngIf="item.type === 'internal'" [href]="item.route">{{ item.name }}</a>
+        <a *ngIf="item.type === 'external'" [href]="item.route" target="_blank">{{ item.name }}</a>
       </li>
     </ul>
 

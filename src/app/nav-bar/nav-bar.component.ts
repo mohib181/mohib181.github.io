@@ -15,12 +15,13 @@ export class NavBarComponent {
   CVPath: string = "files/CV___Mohib.pdf"
 
   navItems = [
-    { name: 'About Me', route: '/about' },
-    { name: 'Work', route: '/work' },
-    { name: 'Research', route: '/research' },
-    { name: 'Education', route: '/education' },
-    { name: 'Skills', route: '/skills' },
-    { name: 'Projects', route: '/projects' }
+    { name: 'About Me', type: 'internal', route: '#about'},
+    { name: 'Work', type: 'internal', route: '#work'},
+    { name: 'Research', type: 'internal', route: '#research' },
+    { name: 'Education', type: 'internal', route: '#education' },
+    { name: 'Skills', type: 'internal', route: '#skills' },
+    { name: 'Projects', type: 'router', route: '/projects' },
+    { name: 'CV', type: 'external', route: this.CVPath }
   ];
 
   toggleMenu() {
