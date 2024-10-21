@@ -1,0 +1,18 @@
+<section class="education-section" id="education">
+    <h2 class="section-title">
+        Education
+        <hr>
+    </h2>
+
+    <!-- Education List -->
+    <div class="institute" *ngFor="let institute of instituteList">
+        <div class="institute-details">
+            <div class="institute-header">
+                <h4>{{ institute.name }}</h4>
+                <p>{{ institute.duration }}</p>
+            </div>
+            <p>{{ institute.degree }}, {{institute.grade}}</p>
+        </div>
+    </div>
+
+</section>
