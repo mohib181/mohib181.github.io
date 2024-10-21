@@ -18,7 +18,7 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .work-details {
@@ -29,7 +29,7 @@
 .work-title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .work-details p {
@@ -38,7 +38,8 @@
 }
 
 .email-address {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    color: #666;
     font-size: 16px;
     padding: 3px 0;
     border-top: 1px solid #ccc;
@@ -48,17 +49,26 @@
 
 .email-address a {
     color: inherit;
+    padding-left: 5px;
     text-decoration: none;
+}
+
+.email-address a:hover {
+    color: inherit;
+    text-underline-offset: 3px;
+    text-decoration: underline dotted #666;
 }
 
 .social-links {
     display: flex;
+    color: #666;
     gap: 0.7rem;
     list-style-type: none;
 }
 
 .social-links a {
     text-decoration: none;
+    font-size: large;
     color: inherit;
 }
 
