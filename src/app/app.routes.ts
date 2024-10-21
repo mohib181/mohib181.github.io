@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: AboutMeComponent,
+        component: HomeComponent,
         title: 'Md. Mohib Hossain'
     },
     {
